@@ -50,13 +50,12 @@ divTodoList.addEventListener("click", (event) => {
     // click en el check
     todoList.marcarCompletado(todoId);
     todoElemento.classList.toggle("completed");
-  } 
-  // else if (nombreElemento.includes("button")) {
-  //   // hay que borrar el todo
+  } else if (nombreElemento.includes("button")) {
+    // hay que borrar el todo
 
-  //   todoList.eliminarTodo(todoId);
-  //   divTodoList.removeChild(todoElemento);
-  // }
+    todoList.eliminarTodo(todoId);
+    divTodoList.removeChild(todoElemento);
+  }
 });
 
 // btnBorrar.addEventListener("click", () => {

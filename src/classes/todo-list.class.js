@@ -38,23 +38,23 @@ export class TodoList {
 
     eliminarCompletados() {
         
-        this.todos = this.todos.filter( todo => !todo.completado )
+        this.todos = this.todos.filter( todo => !todo.completado );
         // this.guardarLocalStorage();
     }
 
-    // guardarLocalStorage(){
+    guardarLocalStorage(){
 
-    //     localStorage.setItem('todo', JSON.stringify( this.todos ) );
+        // localStorage.setItem('todo', JSON.stringify( this.todos ) );
         
-    // }
+    }
 
-    // cargarLocalStorage(){
+    cargarLocalStorage(){
 
-    //     this.todos = ( localStorage.getItem('todo') )
-    //                     ? JSON.parse( localStorage.getItem('todo') )
-    //                     : [];
+        // this.todos = ( localStorage.getItem('todo') )
+        //                 ? JSON.parse( localStorage.getItem('todo') )
+        //                 : [];
         
-    //     this.todos = this.todos.map( Todo.fromJson );
-    // }
+        // this.todos = this.todos.map( Todo.fromJson );
+    }
 
 }

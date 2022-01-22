@@ -41,22 +41,23 @@ txtInput.addEventListener("keyup", (event) => {
   }
 });
 
-// divTodoList.addEventListener("click", (event) => {
-//   const nombreElemento = event.target.localName; // input, label, button
-//   const todoElemento = event.target.parentElement.parentElement;
-//   const todoId = todoElemento.getAttribute("data-id");
+divTodoList.addEventListener("click", (event) => {
+  const nombreElemento = event.target.localName; // input, label, button
+  const todoElemento = event.target.parentElement.parentElement;
+  const todoId = todoElemento.getAttribute("data-id");
 
-//   if (nombreElemento.includes("input")) {
-//     // click en el check
-//     todoList.marcarCompletado(todoId);
-//     todoElemento.classList.toggle("completed");
-//   } else if (nombreElemento.includes("button")) {
-//     // hay que borrar el todo
+  if (nombreElemento.includes("input")) {
+    // click en el check
+    todoList.marcarCompletado(todoId);
+    todoElemento.classList.toggle("completed");
+  } 
+  // else if (nombreElemento.includes("button")) {
+  //   // hay que borrar el todo
 
-//     todoList.eliminarTodo(todoId);
-//     divTodoList.removeChild(todoElemento);
-//   }
-// });
+  //   todoList.eliminarTodo(todoId);
+  //   divTodoList.removeChild(todoElemento);
+  // }
+});
 
 // btnBorrar.addEventListener("click", () => {
 //   todoList.eliminarCompletados();

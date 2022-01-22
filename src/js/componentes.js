@@ -1,9 +1,9 @@
-// import { Todo } from "../classes";
-// import { todoList } from "../index";
+import { Todo } from "../classes";
+import { todoList } from "../index";
 
 // Referencias en el HTML
 const divTodoList = document.querySelector(".todo-list");
-// const txtInput = document.querySelector(".new-todo");
+const txtInput = document.querySelector(".new-todo");
 // const btnBorrar = document.querySelector(".clear-completed");
 // const ulFiltros = document.querySelector(".filters");
 // const anchorFiltros = document.querySelectorAll(".filtro");
@@ -29,17 +29,17 @@ export const crearTodoHtml = (todo) => {
   return div.firstElementChild;
 };
 
-// // Eventos
-// txtInput.addEventListener("keyup", (event) => {
-//   if (event.keyCode === 13 && txtInput.value.length > 0) {
-//     console.log(txtInput.value);
-//     const nuevoTodo = new Todo(txtInput.value);
-//     todoList.nuevoTodo(nuevoTodo);
+// Eventos
+txtInput.addEventListener("keyup", (event) => {
+  if (event.keyCode === 13 && txtInput.value.length > 0) {
+    console.log(txtInput.value);
+    const nuevoTodo = new Todo(txtInput.value);
+    todoList.nuevoTodo(nuevoTodo);
 
-//     crearTodoHtml(nuevoTodo);
-//     txtInput.value = "";
-//   }
-// });
+    crearTodoHtml(nuevoTodo);
+    txtInput.value = "";
+  }
+});
 
 // divTodoList.addEventListener("click", (event) => {
 //   const nombreElemento = event.target.localName; // input, label, button

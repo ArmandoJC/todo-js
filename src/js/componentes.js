@@ -4,7 +4,7 @@ import { todoList } from "../index";
 // Referencias en el HTML
 const divTodoList = document.querySelector(".todo-list");
 const txtInput = document.querySelector(".new-todo");
-// const btnBorrar = document.querySelector(".clear-completed");
+const btnBorrar = document.querySelector(".clear-completed");
 // const ulFiltros = document.querySelector(".filters");
 // const anchorFiltros = document.querySelectorAll(".filtro");
 
@@ -58,17 +58,17 @@ divTodoList.addEventListener("click", (event) => {
   }
 });
 
-// btnBorrar.addEventListener("click", () => {
-//   todoList.eliminarCompletados();
+btnBorrar.addEventListener("click", () => {
+  todoList.eliminarCompletados();
 
-//   for (let i = divTodoList.children.length - 1; i >= 0; i--) {
-//     const elemento = divTodoList.children[i];
+  for (let i = divTodoList.children.length - 1; i >= 0; i--) {
+    const elemento = divTodoList.children[i];
 
-//     if (elemento.classList.contains("completed")) {
-//       divTodoList.removeChild(elemento);
-//     }
-//   }
-// });
+    if (elemento.classList.contains("completed")) {
+      divTodoList.removeChild(elemento);
+    }
+  }
+});
 
 // ulFiltros.addEventListener("click", (event) => {
 //   const filtro = event.target.text;
